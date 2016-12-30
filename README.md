@@ -2,6 +2,8 @@
 
 This repository is inspired by [jaredculp/iterm2-borderless-padding](https://github.com/jaredculp/iterm2-borderless-padding) but as his repository is no longer being maintained I figured I should take over.
 
+![iterm2-no-titlebar](https://i.imgur.com/kB7yR7G.png)
+
 ## What is this?
 
 This repository contains a small and simple patch that removes the titlebar and borders from the standard iTerm and also adds some margin on either side (currently a hardcoded 25px).

@@ -1,0 +1,44 @@
+From b6f5de691a05f18003a9bdc35172561518eb4ca9 Mon Sep 17 00:00:00 2001
+From: Felix Wittwer <dev@felixwittwer.de>
+Date: Thu, 29 Dec 2016 19:44:20 +0100
+Subject: [PATCH] Remove title bar, add padding
+
+---
+ sources/PseudoTerminal.m         | 3 +--
+ sources/iTermTextDrawingHelper.h | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/sources/PseudoTerminal.m b/sources/PseudoTerminal.m
+index 3b2706a..fd6e082 100644
+--- a/sources/PseudoTerminal.m
++++ b/sources/PseudoTerminal.m
+@@ -339,8 +339,7 @@ + (NSInteger)styleMaskForWindowType:(iTermWindowType)windowType {
+             return NSBorderlessWindowMask;
+ 
+         default:
+-            return (NSTitledWindowMask |
+-                    NSClosableWindowMask |
++            return (NSClosableWindowMask |
+                     NSMiniaturizableWindowMask |
+                     NSResizableWindowMask |
+                     NSTexturedBackgroundWindowMask);
+diff --git a/sources/iTermTextDrawingHelper.h b/sources/iTermTextDrawingHelper.h
+index 0612aa8..6d742ea 100644
+--- a/sources/iTermTextDrawingHelper.h
++++ b/sources/iTermTextDrawingHelper.h
+@@ -13,10 +13,10 @@
+ #import "VT100GridTypes.h"
+ 
+ // Number of pixels margin on left and right edge.
+-#define MARGIN 5
++#define MARGIN 25
+ 
+ // Number of pixels margin on the top.
+-#define VMARGIN 2
++#define VMARGIN 25
+ 
+ @class iTermColorMap;
+ @class iTermFindOnPageHelper;
+-- 
+2.10.1 (Apple Git-78)
+
